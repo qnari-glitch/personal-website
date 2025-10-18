@@ -1,0 +1,159 @@
+/*
+ * screen.css
+ *
+ * This stylesheet controls the overall layout and presentation of the
+ * website. The markup uses semantic HTML5 sections and this file
+ * contains all of the visual styling. A small responsive layout
+ * adjustment is provided at the bottom of the file to ensure the
+ * site remains usable on narrow screens. The selectors defined here
+ * demonstrate simple element, class and id selectors as requested.
+ */
+
+/* Reset some basic margins/padding so that our layout is predictable */
+body,
+h1,
+h2,
+h3,
+p,
+ul,
+ol,
+table {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.5;
+  background-color: #f7f9fb;
+  color: #222;
+}
+
+/* A generic container class to center text */
+.centered {
+  text-align: center;
+  color: #c2185b; /* dark pink accent */
+}
+
+/* Layout: header occupies full width on top */
+#header {
+  width: 100%;
+  background-color: #e91e63; /* pink base color */
+  color: #fff;
+  text-align: center;
+  padding: 20px 0;
+  border-bottom: 5px solid #c2185b;
+  border-radius: 0 0 5px 5px;
+}
+
+/* Left navigation bar styles */
+#leftnav {
+  float: left;
+  width: 20%;
+  min-height: 200px;
+  background-color: #fde4ec; /* light pink */
+  border: 2px outset #c2185b;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+#leftnav h2 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+#leftnav ul {
+  list-style-type: none;
+  margin-left: 0;
+}
+
+#leftnav ul li {
+  margin-bottom: 8px;
+}
+
+#leftnav ul li a {
+  text-decoration: none;
+  color: #880e4f;
+  font-weight: bold;
+}
+
+#leftnav ul li a:hover {
+  color: #e91e63;
+}
+
+/* Main content area */
+#centerbody {
+  float: left;
+  width: 70%;
+  min-height: 200px;
+  border: 2px outset #f06292; /* soft pink border */
+  background-color: #fff;
+  padding: 20px;
+  box-sizing: border-box;
+  text-align: left;
+}
+
+#centerbody h2 {
+  color: #c2185b;
+  margin-bottom: 10px;
+}
+
+#centerbody p {
+  margin-bottom: 15px;
+}
+
+/* Table styling */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+th,
+td {
+  border: 1px solid #bdc3c7;
+  padding: 8px;
+  text-align: left;
+}
+
+th {
+  background-color: #e91e63;
+  color: #fff;
+}
+
+/* Footer section */
+#footer {
+  clear: both;
+  width: 100%;
+  background-color: #e91e63;
+  color: #fff;
+  text-align: center;
+  padding: 15px 0;
+  margin-top: 20px;
+  border-top: 5px solid #c2185b;
+  border-radius: 5px 5px 0 0;
+}
+
+/* Responsive design for narrower screens */
+@media screen and (max-width: 600px) {
+  #leftnav, #centerbody {
+    float: none;
+    width: 100%;
+    margin: 0;
+  }
+  #header,
+  #footer {
+    padding: 10px 0;
+  }
+  #leftnav ul li a {
+    display: block;
+    padding: 5px 0;
+  }
+}
+
+/* A simple class for responsive images with a border */
+.responsive-image {
+  max-width: 100%;
+  height: auto;
+  border: 3px solid #f8bbd0;
+}
